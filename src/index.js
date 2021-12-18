@@ -1,12 +1,8 @@
 import "./style.css";
-function component() {
-  const element = document.createElement("div");
+import React from 'react';
+import ReactDOM from 'react-dom'
 
-  // Lodash, now imported by this script
-  element.innerHTML = ["Hello", "webpack"].join(" ");
-  element.classList.add("hello");
-
-  return element;
-}
-
-document.body.appendChild(component());
+ReactDOM.render(
+    <h1>Hello, world!</h1>,
+    document.getElementById('root')
+);

@@ -1,0 +1,25 @@
+{
+  "name": "build-an-input-practice",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtingsu/build-an-input-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidtingsu/build-an-input-practice/issues"
+  },
+  "homepage": "https://github.com/davidtingsu/build-an-input-practice#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.5"
+  },
+  "dependencies": {
+    "webpack": "^5.65.0"
+  }
+}

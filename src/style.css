@@ -3,7 +3,8 @@
   --input-element-height: 48px;
   --input-font-size: 16px;
   --border-color: rgb(95, 157, 201);
-  --value-border-color: rgb(217,217,217);
+  --value-border-color: rgb(217, 217, 217);
+  --disabled-border-color: rgb(217, 217, 217);
 }
 * {
   box-sizing: border-box;
@@ -22,22 +23,32 @@
   border-style: solid;
   cursor: pointer;
 }
-[data-component="number-input"] button:active {
-    opacity: 0.5;
+[data-component="number-input"] button:not(.disabled):active {
+  opacity: 0.5;
 }
 [data-component="number-input"] .value {
-    border: 2px solid var(--value-border-color);
+  border: 2px solid var(--value-border-color);
 }
-[data-component="number-input"] .plus::before, [data-component="number-input"] .symbol::after {
-    content: "";
-    width: 20px;
-    height: 2px;
-    display: block;
-    background-color: var(--border-color);
-    margin: 0 auto;
+[data-component="number-input"] button.symbol.disabled {
+  border-color: var(--disabled-border-color);
+  cursor: not-allowed;
+}
+[data-component="number-input"] button.symbol.disabled::before,
+[data-component="number-input"] button.symbol.disabled::after {
+  background-color: var(--disabled-border-color);
+  cursor: not-allowed;
+}
+[data-component="number-input"] .plus::before,
+[data-component="number-input"] .symbol::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  display: block;
+  background-color: var(--border-color);
+  margin: 0 auto;
 }
 [data-component="number-input"] .plus::after {
-    transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
 }
 
 [data-component="number-input"] [data-component="element"] {

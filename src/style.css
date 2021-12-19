@@ -1,3 +1,50 @@
-.hello {
-    color: red;
-  }
+:root {
+  --input-element-width: 48px;
+  --input-element-height: 48px;
+  --input-font-size: 16px;
+  --border-color: rgb(95, 157, 201);
+  --value-border-color: rgb(217,217,217);
+}
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+[data-component="number-input"] {
+  font-size: var(--input-font-size);
+  display: inline-grid;
+  grid-template-columns: repeat(3, 48px);
+  grid-column-gap: 8px;
+  padding: 8px;
+}
+[data-component="number-input"] button {
+  border-color: var(--border-color);
+  background-color: transparent;
+  border-style: solid;
+  cursor: pointer;
+}
+[data-component="number-input"] button:active {
+    opacity: 0.5;
+}
+[data-component="number-input"] .value {
+    border: 2px solid var(--value-border-color);
+}
+[data-component="number-input"] .plus::before, [data-component="number-input"] .symbol::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    display: block;
+    background-color: var(--border-color);
+    margin: 0 auto;
+}
+[data-component="number-input"] .plus::after {
+    transform: rotateZ(90deg);
+}
+
+[data-component="number-input"] [data-component="element"] {
+  width: var(--input-element-width);
+  height: var(--input-element-height);
+  display: inline-block;
+  text-align: center;
+  line-height: var(--input-element-height);
+  border-radius: 5px;
+}

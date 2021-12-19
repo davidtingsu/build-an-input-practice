@@ -23,18 +23,18 @@
   border-style: solid;
   cursor: pointer;
 }
-[data-component="number-input"] button:not(.disabled):active {
+[data-component="number-input"] button:not(:disabled):active {
   opacity: 0.5;
 }
 [data-component="number-input"] .value {
   border: 2px solid var(--value-border-color);
 }
-[data-component="number-input"] button.symbol.disabled {
+[data-component="number-input"] button.symbol:disabled {
   border-color: var(--disabled-border-color);
   cursor: not-allowed;
 }
-[data-component="number-input"] button.symbol.disabled::before,
-[data-component="number-input"] button.symbol.disabled::after {
+[data-component="number-input"] button.symbol:disabled:before,
+[data-component="number-input"] button.symbol:disabled:after {
   background-color: var(--disabled-border-color);
   cursor: not-allowed;
 }

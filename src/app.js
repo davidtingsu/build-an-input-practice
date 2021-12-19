@@ -1,10 +1,10 @@
 import React from "react";
-import { CustomInput } from "./components/custom-input";
+import { CustomInputNumber } from "./components/custom-input-number";
 
 export const App = () => {
   return (
     <>
-      <CustomInput value={2} />
+      <CustomInputNumber value={2} />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-export const CustomInput = ({
+export const CustomInputNumber = ({
   min,
   max,
   step,

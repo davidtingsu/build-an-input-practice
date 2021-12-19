@@ -12,7 +12,7 @@ export const CustomInputNumber = ({
   return (
     <div data-component="number-input">
       <button data-component="element" className={'minus symbol'}/>
-      <div data-component="element" className={'value'} contentEditable>{value}</div>
+      <input data-component="element" className={'value'} value={value}/>
       <button data-component="element" className={'plus symbol'}><div/></button>
     </div>
   );
